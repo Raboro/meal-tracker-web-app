@@ -1,4 +1,15 @@
 services:
+  frontend:
+    build: ./meal-tracker-web-app-frontend
+    ports:
+      - "4200:4200"
+    depends_on:
+      - backend
+    networks:
+      my-network:
+        aliases:
+        - frontend
+
   backend:
     build: ./meal-tracker-web-app-backend
     ports:
