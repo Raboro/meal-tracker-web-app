@@ -5,6 +5,6 @@
         <label for="">Date</label>
         <input type="date" id="dateinput" [formControl]="date">
     </form>
-
     <button (click)="addMeal()">Submit</button>
+    <p class="error">{{errorMessage}}</p>
 </div>
