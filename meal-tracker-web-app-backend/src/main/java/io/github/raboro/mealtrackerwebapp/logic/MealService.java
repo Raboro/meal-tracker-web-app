@@ -25,4 +25,8 @@ public class MealService {
         final Meal meal = mapper.toModel(dto);
         return mapper.toDTO(repository.save(meal));
     }
+
+    public void deleteMeal(long id) {
+        repository.deleteById(id);
+    }
 }
