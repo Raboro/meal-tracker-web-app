@@ -33,7 +33,7 @@ public class MealResource {
     @Path("/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
-    public Response deleteFlowerByID(@PathParam("id") long id) {
+    public Response deleteMealById(@PathParam("id") long id) {
         service.deleteMeal(id);
         return Response.ok().build();
     }
