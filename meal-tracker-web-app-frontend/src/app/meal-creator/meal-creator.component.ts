@@ -15,7 +15,7 @@ export class MealCreatorComponent {
   date = new FormControl();
   errorMessage: string = '';
 
-  constructor(service: MealCreatorService) {}
+  constructor(private service: MealCreatorService) {}
 
   addMeal(): void {
     this.errorMessage = '';
@@ -28,5 +28,13 @@ export class MealCreatorComponent {
       this.errorMessage = ErrorText.INVALID_DATE;
       return;
     }
+    this.service
+      .addMeal({
+        name: this.name.value as string,
+        date: this.date.value,
+      })
+      .subscribe((response) => {
+        console.log(response);
+      });
   }
 }
