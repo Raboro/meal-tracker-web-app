@@ -11,6 +11,6 @@ export class MealCreatorService {
   private constructor(private httpClient: HttpClient) {}
 
   addMeal(meal: Meal): Observable<Meal> {
-    return this.httpClient.post<Meal>(`${environment.API_BAE_DIR}/meal`, meal);
+    return this.httpClient.post<Meal>(`${environment.API_BASE_URL}/meal`, meal);
   }
 }
