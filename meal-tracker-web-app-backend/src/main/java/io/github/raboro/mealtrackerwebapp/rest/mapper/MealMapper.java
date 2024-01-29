@@ -6,7 +6,7 @@ import io.github.raboro.mealtrackerwebapp.rest.dto.MealDTO;
 public class MealMapper {
 
     public MealDTO toDTO(Meal meal) {
-        return new MealDTO(meal.getName(), meal.getDate());
+        return new MealDTO(meal.getId(), meal.getName(), meal.getDate());
     }
 
     public Meal toModel(MealDTO dto) {
