@@ -10,7 +10,7 @@ To start the application you can just type `$ make up`. This starts the docker c
 After the startup you can go to `http://localhost:4200/` and use the application.
 
 ### Start not via Make
-If you wanna start the application without make, you can do this by use `$ docker-compose up --build` or if you just wanna run the frontend without backend and database you can do `$ cd meal-tracker-web-app | ng serve`.
+If you wanna start the application without make, you can do this by use `$ docker-compose up --build` or if you just wanna run the frontend without backend and database you can do `$ cd meal-tracker-web-app-frontend/` and then `$ ng serve`.
 
 ## API
 
